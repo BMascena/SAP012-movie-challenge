@@ -7,18 +7,19 @@ const options = {
 };
 const App = () => {
   // Realiza a requisição à API
+  const cartoes = document.createElement('ul');
+  cartoes.classList.add('container_cartoes');
+
   fetch('https://api.themoviedb.org/3/list/8294392?language=en-US&page=1', options)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
-      const cartoes = document.createElement('ul');
-      cartoes.classList.add('container_cartoes');
+      console.log(data)
 
       data.items.forEach(item => {
         cartoes.innerHTML += `
         <li class="container_li">
           <dl>
-            <dt><img src="${item.poster_path}" alt="${item.title}" itemprop="imageUrl" class="img_card" /></dt>
+            <dt><img src="https://image.tmdb.org/t/p/w300${item.poster_path}" alt="${item.title}" itemprop="imageUrl" class="img_card" /></dt>
             <dt>${item.release_date}</dt>
             <dt>${item.title}</dt>
           </dl>
@@ -26,8 +27,8 @@ const App = () => {
         `;
         console.log(cartoes);
       })
-      return cartoes;
     });
+    return cartoes;
 };
 
 export default App;
