@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Vingadores';
+    src: url(./fontes/AVENGEANCE\ HEROIC\ AVENGER\ AT.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+h1{
+    font-family: Vingadores;
+    text-align: end;
+    padding: 30px;
+    
+}
+
+footer{
+    background-color: blue;
+    font-family: Vingadores;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
