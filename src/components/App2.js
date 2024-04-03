@@ -8,19 +8,16 @@ const App2 = (filmeId) => {
   // Chama a função buscarFilmes e processa os resultados
   buscarDetalhes(filmeId).then(filme => {
       detalhes.innerHTML = `    
-        <div>
         <a href="#${filme.id}">
         <img src="https://image.tmdb.org/t/p/w300${filme.backdrop_path}" alt="${filme.title}" class="img_card" />
         </a>
-          <h1>${filme.title}</h1>
+          <p classe='títuloApp2'>${filme.title}</p>
           <span>${filme.release_date}</span>
           <span>${filme.vote_count}</span>    
-          <span>${filme.genres.name}</span>
-          <p>${filme.overview}</p>
-        </div>`;
+          <p>${filme.genres.name}</p>  
+          <p>${filme.overview}</p>`;
   });
   return detalhes;
 };
 
 export default App2;
-

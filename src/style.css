@@ -16,12 +16,12 @@ header{
 }
 
 h1{
+    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
     font-family: Vingadores;
     font-size: 70px;
     color:aliceblue;
     text-align: end;
-    padding:  30px 70px 10px 0;
-    
+    padding:  20px 70px 10px 0;
 }
 
 .container_cartoes{
@@ -30,6 +30,7 @@ h1{
     flex-wrap: wrap;
     display: flex;
     gap: 20px;
+    padding: 10px;
 }
 
 .container_li{
@@ -50,7 +51,7 @@ h1{
     transform: translateY(-20px); /* Adicionando um efeito de elevação ao passar o mouse */
 } 
 
-.img_card{
+.img_cards{
     width: 93%;
     max-width: 290px;
     height: auto;

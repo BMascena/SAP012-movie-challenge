@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Vingadores';
+    src: url(./fontes/AVENGEANCE\ HEROIC\ AVENGER\ AT.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.img_card{
+ 
+}

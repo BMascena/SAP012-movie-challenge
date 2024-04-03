@@ -3,6 +3,7 @@ import App2 from './components/App2.js'; // Importa o segundo componente
 
 // Adiciona os componentes ao elemento com o ID "root"
 const home = document.getElementById('root').appendChild(App()); // Obtém a referência ao elemento principal
+
 const pgSecundaria = (filmeId) => {
     document.getElementById('root').appendChild(App2(filmeId));
 }
