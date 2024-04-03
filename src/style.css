@@ -6,17 +6,71 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
+}
+
+header{
+    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
 }
 
 h1{
     font-family: Vingadores;
+    font-size: 70px;
+    color:aliceblue;
     text-align: end;
-    padding: 30px;
+    padding:  30px 70px 10px 0;
     
 }
 
+.container_cartoes{
+    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
+    color:aliceblue;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+}
+
+.container_li{
+    list-style: none;
+    font-family: Vingadores;
+    margin: 5px;
+    width: 23%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.container_li:hover {
+    transform: translateY(-20px); /* Adicionando um efeito de elevação ao passar o mouse */
+} 
+
+.img_card{
+    width: 93%;
+    max-width: 290px;
+    height: auto;
+    border-radius: 10%;
+}
+
+dl{
+    word-break:break-word;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+dt{
+    font-weight: bold;
+}
+
+
 footer{
-    background-color: blue;
+    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
+    color:aliceblue;
     font-family: Vingadores;
     text-align: center;
     padding: 10px;

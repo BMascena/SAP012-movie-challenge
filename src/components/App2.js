@@ -1,35 +1,25 @@
-import {buscarFilmes} from '../lib/tmdb.js';
+import { buscarDetalhes } from '../lib/tmdb.js';
 
-const App2 = () => {
-  // Cria um elemento <ul> para armazenar os cartões de filmes
-  const cartoes2 = document.createElement('ul');
-  cartoes2.classList.add('container_cartoes2');   // Adiciona uma classe CSS ao elemento <ul>
+const App2 = (filmeId) => {
+  // Cria um elemento <div> para armazenar os cartões de filmes
+  const detalhes = document.createElement('div');
+  detalhes.className = 'container_detalhes'; // "className" em vez de "classname"
 
-
-// se ele escutar o click na imagem me retorna a lista abaixo 
-
-
-  buscarFilmes().then(listaDeFilmes=>{
-    listaDeFilmes.items.forEach(item => {   // Manipula os dados recebidos da API
-       // Para cada item na resposta, cria um cartão de filme e adiciona ao elemento <ul>
-      cartoes2.innerHTML += `    
-      <li class="container_li2">
-        <dl>
-          <dt>
-           <a href="#${item.id}"> <img  src="https://image.tmdb.org/t/p/w300${item.backdrop_path}" alt="${item.title}" itemprop="imageUrl" class="img_card" /></a>
-          </dt>
-          <dt>${item.title}</dt>
-          <dt>${item.release_date}</dt>
-          <dt>${item.vote_count}</dt>X    
-          <dt>${item.genre_ids}</dt>
-          <dt>${item.overview}</dt>
-        </dl>
-      </li> 
-      `;
-    })
-   // Retorna o elemento <ul> com os cartões de filmes
-  })
-    return cartoes2;
+  // Chama a função buscarFilmes e processa os resultados
+  buscarDetalhes(filmeId).then(filme => {
+      detalhes.innerHTML = `    
+        <div>
+        <a href="#${filme.id}">
+        <img src="https://image.tmdb.org/t/p/w300${filme.backdrop_path}" alt="${filme.title}" class="img_card" />
+        </a>
+          <h1>${filme.title}</h1>
+          <span>${filme.release_date}</span>
+          <span>${filme.vote_count}</span>    
+          <span>${filme.genres.name}</span>
+          <p>${filme.overview}</p>
+        </div>`;
+  });
+  return detalhes;
 };
 
 export default App2;
