@@ -7,8 +7,34 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    display: flex;
 }
 
-.img_card{
- 
+h1{
+    font-family: Vingadores;
+    font-size: 45px;
+    color:aliceblue;
+    text-align: end;
+    padding:  20px 70px 10px 0;
 }
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+#root{
+    background-image: url(./img/Group\ 1.png);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+}
+
+
+

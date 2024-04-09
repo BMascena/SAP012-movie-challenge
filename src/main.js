@@ -1,11 +1,12 @@
 import App from './components/App.js'; // Importa o primeiro componente
 import App2 from './components/App2.js'; // Importa o segundo componente
 
+const root = document.getElementById('root')
 // Adiciona os componentes ao elemento com o ID "root"
-const home = document.getElementById('root').appendChild(App()); // Obtém a referência ao elemento principal
+const home = root.appendChild(App()); // Obtém a referência ao elemento principal
 
 const pgSecundaria = (filmeId) => {
-    document.getElementById('root').appendChild(App2(filmeId));
+    root.appendChild(App2(filmeId));
 }
 
 const mudançaDePg = () => { 
@@ -14,11 +15,12 @@ const mudançaDePg = () => {
 
         // Verifica o hash da URL
         if (window.location.hash === "") { // Se o hash for "", adiciona o primeiro componente
+            root.innerHTML = '';
             home;
             
         } else  { // Se o hash for "#", adiciona o segundo componente
             // Limpa o conteúdo anterior
-            home.innerHTML = '';
+            root.innerHTML = '';
             pgSecundaria(window.location.hash);
         }
     }); 

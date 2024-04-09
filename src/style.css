@@ -10,32 +10,32 @@
 }
 
 header{
-    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
     border-bottom: 1px solid #ffffff;
     width: 100%;
 }
 
-h1{
+.h1App{
     background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
     font-family: Vingadores;
-    font-size: 70px;
+    font-size: 45px;
     color:aliceblue;
     text-align: end;
     padding:  20px 70px 10px 0;
 }
 
-.container_cartoes{
+ul{
     background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
     color:aliceblue;
     flex-wrap: wrap;
     display: flex;
-    gap: 20px;
+    gap: 5px;
     padding: 10px;
 }
 
-.container_li{
+li{
     list-style: none;
-    font-family: Vingadores;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
     margin: 5px;
     width: 23%;
     text-align: center;
@@ -44,28 +44,29 @@ h1{
     align-items: center;
     justify-content: center;
     padding: 5px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
-.container_li:hover {
-    transform: translateY(-20px); /* Adicionando um efeito de elevação ao passar o mouse */
-} 
-
-.img_cards{
-    width: 93%;
-    max-width: 290px;
+.img_App{
+    display: block;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
-dl{
-    word-break:break-word;
-    margin: 10px 0;
-    padding: 5px;
+.img_App:hover {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+    box-shadow: 0 0 30px #1b02ff;
+    transform: translateY(-20px); /* Adicionando um efeito de elevação ao passar o mouse */
 }
 
-dt{
+p{
     font-weight: bold;
+    padding: 5px;
 }
 
 

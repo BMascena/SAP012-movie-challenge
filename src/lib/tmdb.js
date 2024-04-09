@@ -26,5 +26,5 @@ export const buscarDetalhes = (filmeId) => {
     .then(response => {return response})
     .catch(err => {return err});
   return filmeDetalhes
-};
+};  
 // criar função para retornar os detalhes do filme
