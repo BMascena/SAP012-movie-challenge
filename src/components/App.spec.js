@@ -1,27 +1,21 @@
 import App from './App.js';
-// import { buscarFilmes } from '../lib/tmdb.js';
- import { mockTeste } from '../teste/mock.js';
+import { mockTeste } from '../teste/mock.js';
+import { buscarFilmes } from '../lib/tmdb.js'; 
 
+// Simula a função buscarFilmes do módulo '../lib/tmdb.js' para retornar uma promessa resolvida com o valor mockTeste
+jest.mock('../lib/tmdb.js', () => ({
+  buscarFilmes: jest.fn(() => Promise.resolve(mockTeste)), // Aqui estamos simulando a função buscarFilmes
+}));
 
-// jest.mock('../lib/tmdb.js',() => {
-//   return {
-//     buscarFilmes:() =>{
-//       return Promise.resolve(mockTeste)
-//     }
-//   }
-// })
-
-// console.log(buscarFilmes)
-
+// Descreve um conjunto de testes para o componente App
 describe('App', () => {
-  it('should render without crashing', () => {
-    fetch = jest.fn().mockResolvedValue({
-      json: () => Promise.resolve( mockTeste ),
-    });
-    const el = App();
-    console.log(el)
-    expect(el instanceof HTMLElement).toBe(true);
+  // Teste: Deve renderizar sem problemas
+  it('Deve renderizar 4 cards', async () => {
+  
+    // Chama a função App e armazena o resultado
+    App();
+
+    // Verifica se a função buscarFilmes foi chamada uma vez
+    expect(buscarFilmes).toHaveBeenCalledTimes(1);
   });
 });
-
-

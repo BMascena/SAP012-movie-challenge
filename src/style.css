@@ -9,33 +9,31 @@
     box-sizing: border-box;
 }
 
-header{
-    border-bottom: 1px solid #ffffff;
-    width: 100%;
-}
-
 .h1App{
-    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
     font-family: Vingadores;
-    font-size: 45px;
+    font-size: 500%;
     color:aliceblue;
     text-align: end;
-    padding:  20px 70px 10px 0;
+    padding: 30px 35px 0 0;
+}
+
+.container_App{
+    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
 }
 
 ul{
     background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
-    color:aliceblue;
     flex-wrap: wrap;
     display: flex;
-    gap: 5px;
+    gap: 1px;
     padding: 10px;
+    margin: 10px;
 }
 
 li{
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     margin: 5px;
     width: 23%;
     text-align: center;
@@ -44,31 +42,25 @@ li{
     align-items: center;
     justify-content: center;
     padding: 5px;
-    transition: transform 0.3s ease-in-out;
+    color:aliceblue;
 }
 
 .img_App{
-    display: block;
-    width: 100%;
-    max-width: 100%;
+    width: 120%;
+    max-width: 150%;
     height: auto;
     border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
 }
 
 .img_App:hover {
     width: 100%;
-    max-width: 100%;
+    max-width: 150%;
     height: auto;
     border-radius: 5%;
     box-shadow: 0 0 30px #1b02ff;
     transform: translateY(-20px); /* Adicionando um efeito de elevação ao passar o mouse */
 }
-
-p{
-    font-weight: bold;
-    padding: 5px;
-}
-
 
 footer{
     background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);

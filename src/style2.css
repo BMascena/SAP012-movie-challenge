@@ -7,30 +7,24 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    display: flex;
 }
 
 h1{
     font-family: Vingadores;
+    display: flex;
     font-size: 45px;
     color:aliceblue;
-    text-align: end;
     padding:  20px 70px 10px 0;
 }
 
-main{
-    width: 100vw;
-    height: 100vh;
-}
-
-#root{
+.container_App2{
     background-image: url(./img/Group\ 1.png);
     background-size: cover;
     width: 100vw;
     height: 100vh;
 }
 
-img{
+.imgApp2{
     width: 300px;
     height: 300px;
     border-radius: 5%;

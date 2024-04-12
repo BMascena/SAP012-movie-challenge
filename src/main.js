@@ -1,30 +1,40 @@
-import App from './components/App.js'; // Importa o primeiro componente
-import App2 from './components/App2.js'; // Importa o segundo componente
+import App from './components/App.js';              // Importa o primeiro componente
+import App2 from './components/App2.js';            // Importa o segundo componente
 
-const root = document.getElementById('root')
-// Adiciona os componentes ao elemento com o ID "root"
-const home = root.appendChild(App()); // Obtém a referência ao elemento principal
+const root = document.getElementById('root')        // Adiciona os componentes ao elemento com o ID "root"
 
 const pgSecundaria = (filmeId) => {
     root.appendChild(App2(filmeId));
 }
+window.addEventListener('load', () => {
+    
+    // Verifica o hash da URL
+    if (window.location.hash === "") {          // Se o hash for "", adiciona o primeiro componente
+        root.innerHTML = '';                    // Limpa o conteúdo anterior
+        root.appendChild(App());
 
-const mudançaDePg = () => { 
-    // Adiciona um listener para detectar mudanças no hash da URL
-    window.addEventListener('hashchange', () => {
+    } else {                                   // Se o hash for "#", adiciona o segundo componente
+        root.innerHTML = '';                    // Limpa o conteúdo anterior
+        pgSecundaria(window.location.hash);
+    }
+})
+
+const mudançaDePg = () => {
+
+    window.addEventListener('hashchange', () => {   // detecta mudanças no hash da URL
 
         // Verifica o hash da URL
-        if (window.location.hash === "") { // Se o hash for "", adiciona o primeiro componente
-            root.innerHTML = '';
-            home;
-            
-        } else  { // Se o hash for "#", adiciona o segundo componente
-            // Limpa o conteúdo anterior
-            root.innerHTML = '';
+        if (window.location.hash === "") {          // Se o hash for "", adiciona o primeiro componente
+            root.innerHTML = '';                    // Limpa o conteúdo anterior
+            root.appendChild(App());
+
+        } else {                                   // Se o hash for "#", adiciona o segundo componente
+            root.innerHTML = '';                    // Limpa o conteúdo anterior
             pgSecundaria(window.location.hash);
         }
-    }); 
+    });
 };
-// Chama a função para começar a ouvir as mudanças de hash
-mudançaDePg();
+
+mudançaDePg();                                      // Chama a função para começar a ouvir as mudanças de hash
+
 
