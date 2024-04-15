@@ -2,43 +2,43 @@ import { buscarDetalhes } from '../lib/tmdb.js';
 
 const App2 = (filmeId) => {
 
-  const detalhes = document.createElement('div');  // Cria um elemento <div> para armazenar os cartões de filmes
-  detalhes.className = 'container_App2'; // "className" em vez de "classname"
+  const containerApp2 = document.createElement('div'); 
+  containerApp2.className = 'container_App2'; 
 
-  // Chama a função buscarFilmes e processa os resultados
   buscarDetalhes(filmeId).then(filme => {
 
-    let generos = ""
+    let generos = "";
     filme.genres.forEach((genero) => {
       generos += `${genero.name}, `;
     });
-      detalhes.innerHTML = `    
-        <a href="#${filme.id}">
-        <img class='img_App2' src="https://image.tmdb.org/t/p/w300${filme.backdrop_path}" alt="${filme.title}"></img>
-        </a>
-        <h1>
-        ${filme.title}
-        </h1>
-        <span>
-        ${filme.release_date.slice(0,-6)}
-        </span>
-        <span>
-        ⭐${filme.vote_count}
-        </span>
-        <p>
-        ${generos.slice(0,-2)+'.'}
-        </p>
-        <p>
-        ${filme.overview}
-        </p>
-        <a href='/'> <button>VOLTAR</button> </a>
-          `;
+
+    const img = document.createElement('div');
+    img.className = 'imgApp2'; 
+    img.innerHTML = `    
+      <a href="#${filme.id}">
+        <img class='img_App2' src="https://image.tmdb.org/t/p/w500${filme.backdrop_path}" alt="${filme.title}"></img>
+      </a>`;
+    containerApp2.appendChild(img);    
+
+    const detalhes = document.createElement('div');
+    detalhes.className = 'detalhes'; 
+    detalhes.innerHTML += `    
+      <h2 class='h2App2'>${filme.title}</h2>
+      <span>${filme.release_date.slice(0,-6)}</span>
+      <span>⭐${filme.vote_count}</span>
+      <p>${generos.slice(0,-2)+'.'}</p>
+      <p>${filme.overview}</p>
+      <a href='/'>
+      <button class=btn>VOLTAR</button>
+      </a>`;
+    containerApp2.appendChild(detalhes);
+
   });
-  return detalhes;
+
+  return containerApp2;
 };
 
 export default App2;
-
 
 
 
