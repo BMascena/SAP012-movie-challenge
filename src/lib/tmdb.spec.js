@@ -31,7 +31,7 @@ describe('buscarDetalhes', () => {
 
     // Verifica se a função fetch foi chamada com a URL correta
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://api.themoviedb.org/3/movie/${filmeId.slice(1)}?language=pt-BR`,
+      `https://api.themoviedb.org/3/movie/123?language=pt-BR`,
       expect.any(Object)
     );
   });

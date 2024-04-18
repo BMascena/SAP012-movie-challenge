@@ -8,43 +8,54 @@
     padding: 0%;
     box-sizing: border-box;
 }
-.imgApp2{
+
+body{
+    background-image: url(./img/Group\ 1.png);
+    background-position: center center;
     height: 100vh;
-    width: 100%;
-    margin: 20px;
-    padding: 30px;
+}
+
+.container_App2{
+    display: flex;
     align-items: center;
-    background-size: cover;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.divImg{
+    margin: 0 20px 20px 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgApp2{
+    width: 25vw;
+    margin: 5px;
 }
 
 .h2App2{
     font-family: Vingadores;
     font-size: 300%;
     color:aliceblue;
-    text-align:end;
-    margin: 30px 40px;
     box-shadow: 4px 4px 6px 5px rgba(26, 25, 34, 0.973);
-}
-
-.container_App2{
-    display: flex;
-    background-image: url(./img/Group\ 1.png);
-    background-position: center center;
-    background-color: black;
-
+    margin-bottom: 5%;
 }
 
 .detalhes{
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: aliceblue;
     margin: 10px;
-    justify-content: center;
+    padding: 10px;
+    height: 50%;
+    width: 50%;
 } 
 
-
-button{
-    align-items: flex-end;
-    justify-content: flex-end;
+.btn{
+    padding: 1%;
+    font-size: 0.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0 0 1px 4px;
 }
 
 

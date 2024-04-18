@@ -3,7 +3,7 @@ import { buscarDetalhes } from '../lib/tmdb.js';
 const App2 = (filmeId) => {
 
   const containerApp2 = document.createElement('div'); 
-  containerApp2.className = 'container_App2'; 
+  containerApp2.className = 'container_App2';  
 
   buscarDetalhes(filmeId).then(filme => {
 
@@ -13,10 +13,13 @@ const App2 = (filmeId) => {
     });
 
     const img = document.createElement('div');
-    img.className = 'imgApp2'; 
-    img.innerHTML = `    
+    img.className = 'divImg'; 
+    img.innerHTML = ` 
+      <a href='/'>
+      <button class=btn>VOLTAR</button>
+      </a>
       <a href="#${filme.id}">
-        <img class='img_App2' src="https://image.tmdb.org/t/p/w500${filme.backdrop_path}" alt="${filme.title}"></img>
+        <img class='imgApp2' src="https://image.tmdb.org/t/p/w500${filme.poster_path}" alt="${filme.title}"></img>
       </a>`;
     containerApp2.appendChild(img);    
 
@@ -28,9 +31,7 @@ const App2 = (filmeId) => {
       <span>⭐${filme.vote_count}</span>
       <p>${generos.slice(0,-2)+'.'}</p>
       <p>${filme.overview}</p>
-      <a href='/'>
-      <button class=btn>VOLTAR</button>
-      </a>`;
+`;
     containerApp2.appendChild(detalhes);
 
   });

@@ -19,6 +19,7 @@
 
 .container_App{
     background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
+    padding: 15px;
 }
 
 ul{
@@ -33,14 +34,10 @@ ul{
 li{
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
+    font-size: 9px;
     margin: 5px;
     width: 23%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 5px;
     color:aliceblue;
 }
@@ -61,6 +58,7 @@ li{
     box-shadow: 0 0 30px #1b02ff;
     transform: translateY(-20px); /* Adicionando um efeito de elevação ao passar o mouse */
 }
+
 
 footer{
     background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
