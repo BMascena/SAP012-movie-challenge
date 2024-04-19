@@ -17,13 +17,17 @@
     padding: 30px 35px 0 0;
 }
 
-.container_App{
-    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
-    padding: 15px;
-}
+body{
+    background-image: url(./img/Group\ 1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #080131;
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+}   
 
 ul{
-    background: linear-gradient(68.15deg,#1401b9,#080047 16.62%,#080131 85.61%);
     flex-wrap: wrap;
     display: flex;
     gap: 20px;
@@ -40,6 +44,7 @@ li{
     text-align: center;
     padding: 5px;
     color:aliceblue;
+    margin-bottom: 30px;
 }
 
 .img_App{

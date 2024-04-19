@@ -16,7 +16,7 @@ const App2 = (filmeId) => {
     img.className = 'divImg'; 
     img.innerHTML = ` 
       <a href='/'>
-      <button class=btn>VOLTAR</button>
+      <button class=btn>&#8249</button>
       </a>
       <a href="#${filme.id}">
         <img class='imgApp2' src="https://image.tmdb.org/t/p/w500${filme.poster_path}" alt="${filme.title}"></img>
@@ -27,9 +27,10 @@ const App2 = (filmeId) => {
     detalhes.className = 'detalhes'; 
     detalhes.innerHTML += `    
       <h2 class='h2App2'>${filme.title}</h2>
-      <span>${filme.release_date.slice(0,-6)}</span>
+      <span>(${filme.release_date.slice(0,-6)})</span>
       <span>⭐${filme.vote_count}</span>
-      <p>${generos.slice(0,-2)+'.'}</p>
+      <p class='generos'>${generos.slice(0,-2)}.</p>
+      <br>
       <p>${filme.overview}</p>
 `;
     containerApp2.appendChild(detalhes);
