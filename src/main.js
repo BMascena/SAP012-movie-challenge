@@ -6,6 +6,7 @@ const root = document.getElementById('root')        // Adiciona os componentes a
 const pgSecundaria = (filmeId) => {
     root.appendChild(App2(filmeId));
 }
+
 window.addEventListener('load', () => {
     
     // Verifica o hash da URL
